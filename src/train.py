@@ -276,6 +276,8 @@ def main(args, resume_preempt=False):
         time_meter = AverageMeter()
 
         for itr, (udata, masks_enc, masks_pred) in enumerate(unsupervised_loader):
+            print("length of masks_enc", len(masks_enc))
+            print("length of masks_pred", len(masks_pred))
 
             def load_imgs():
                 # -- unsupervised imgs
